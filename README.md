@@ -10,3 +10,11 @@ By Colt Steele
 
 > Slides and course material
 > ><a href="https://att-c.udemycdn.com/2025-10-13_10-30-10-779be9a768a227c5d6ba39c1d9fb8ff1/original.zip?response-content-disposition=attachment%3B+filename%3DAllSlidesPDF-TheUltimateMySQLBootcamp-ColtSteele.zip&Expires=1764682510&Signature=hOX6mY5JMykZsOA26yM~CbKhElZaimt-41xnzFYd7~KaHPDW9btQeCZbLXDcwd3jovTWceqNglmN7ByAFCFCYqloXuZTnuFEwidSWmhUI9Rz3YKXlxeEgkE7AAXUtO5TxVMMp5DAQk4szxWofVH~8l-n5IjyfLHu8ryf3aY~9gPznu8nNKOmz4IaeOCNTvtwdCPvDF9LBUqTjJ-CqOz462MWKgSIW2BAUVuC-z123Z4DTy5-DCMLz~q5KBV8B62WgftHh0aVgkaPUUqYHPFbbIG-v191hJEeIELi7Wn4-qlDnU2m5YxIli-rdljmmcGcj2hEKWTa3PuTPgd48jd1Fg__&Key-Pair-Id=K3MG148K9RIRF4" >Download link</a>
+
+
+W3 schools - <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_or">SQL play box</a>
+
+
+What is a database: 
+1. Collection of data
+2. 
