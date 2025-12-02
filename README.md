@@ -17,4 +17,9 @@ W3 schools - <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_o
 
 What is a database: 
 1. Collection of data
-2. 
+2. A method for accessing and manipulating that data
+
+
+Database vs. Database Management System
+<img width="1286" height="567" alt="image" src="https://github.com/user-attachments/assets/816f5bff-e4f6-4e49-b271-9b0e296ae4ee" />
+
