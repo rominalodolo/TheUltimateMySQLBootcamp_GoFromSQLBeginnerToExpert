@@ -25,4 +25,9 @@ These are all management systems that work with your data base.
 
 SQL = structured query language 
 
-MySQL = 
+MySQL, SQLite, Postgress, Oracle, etc. = relational databases 
+
+Installing MySQL workbench: 
+> [Video tutorial](https://www.youtube.com/watch?v=wpGnJHb2R58) to insall from 11 months ago
+> 
+
