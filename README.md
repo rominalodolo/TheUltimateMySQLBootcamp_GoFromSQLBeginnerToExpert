@@ -52,8 +52,9 @@ Installing MySQL workbench:
 
 
 I ran into a few issues so I restarted my terminal and ran these: 
-sudo /usr/local/mysql/support-files/mysql.server start
-/usr/local/mysql/bin/mysql -u root -p
+> > sudo /usr/local/mysql/support-files/mysql.server start
+> > 
+> > /usr/local/mysql/bin/mysql -u root -p
 ```
 Enter password: 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -70,6 +71,8 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 mysql>
 ```
+Then I killed the terminal to check by running `mysql --version`
+<img width="505" height="110" alt="image" src="https://github.com/user-attachments/assets/8ec4022f-a817-481c-93d7-bf32e06e64c6" />
 
 
 Get more [Docs](https://dev.mysql.com/doc/) 
