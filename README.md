@@ -28,6 +28,27 @@ SQL = structured query language
 MySQL, SQLite, Postgress, Oracle, etc. = relational databases 
 
 Installing MySQL workbench: 
-> [Video tutorial](https://www.youtube.com/watch?v=wpGnJHb2R58) to insall from 11 months ago
-> 
+> [Video tutorial](https://www.youtube.com/watch?v=wpGnJHb2R58)
+> to insall from 11 months ago
+
+
+## Terminal configuration for MySQL
+> [Download](https://dev.mysql.com/downloads/mysql/) SQL
+> My current local set up is MAC os 13, and M1 chip.
+> Downloading the 8.4.0 version ARM type
+> <img width="2658" height="1424" alt="image" src="https://github.com/user-attachments/assets/b844d478-cf4a-4583-8bcf-8c75e4641935" />
+
+
+- Check which terminal you are using with this command:
+    
+    echo $SHELL
+  
+    
+- If you get `/bin/zsh` then execute this line to configure MySQL:
+    
+    echo "export PATH=\${PATH}:/usr/local/mysql/bin" >> ~/.zshrc
+
+    <img width="982" height="406" alt="image" src="https://github.com/user-attachments/assets/87411a85-f1be-46a4-92a2-5392681be005" />
+
+    mysql -u root -p
 
