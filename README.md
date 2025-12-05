@@ -41,14 +41,12 @@ Installing MySQL workbench:
 
 - Check which terminal you are using with this command:
     
-    echo $SHELL
+    ``echo $SHELL``
   
     
 - If you get `/bin/zsh` then execute this line to configure MySQL:
     
     echo "export PATH=\${PATH}:/usr/local/mysql/bin" >> ~/.zshrc
-
-    <img width="982" height="406" alt="image" src="https://github.com/user-attachments/assets/87411a85-f1be-46a4-92a2-5392681be005" />
 
     mysql -u root -p
 
