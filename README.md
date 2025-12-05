@@ -73,6 +73,8 @@ mysql>
 ```
 Then I killed the terminal to check by running `mysql --version`
 <img width="505" height="110" alt="image" src="https://github.com/user-attachments/assets/8ec4022f-a817-481c-93d7-bf32e06e64c6" />
+<img width="202" height="143" alt="image" src="https://github.com/user-attachments/assets/906856ea-1865-41ec-948f-15ba628846ce" />
+
 
 
 Get more [Docs](https://dev.mysql.com/doc/) 
