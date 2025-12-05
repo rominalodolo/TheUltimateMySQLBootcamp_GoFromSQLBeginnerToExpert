@@ -37,7 +37,7 @@ Installing MySQL workbench:
 > My current local set up is MAC os 13, and M1 chip.
 > Downloading the 8.4.0 version ARM type
 > <img width="2658" height="1424" alt="image" src="https://github.com/user-attachments/assets/b844d478-cf4a-4583-8bcf-8c75e4641935" />
-
+> <img width="635" height="415" alt="image" src="https://github.com/user-attachments/assets/a3e2fa7f-f903-4a9d-91bb-4e3690bf70a2" />
 
 - Check which terminal you are using with this command:
     
@@ -49,5 +49,27 @@ Installing MySQL workbench:
     echo "export PATH=\${PATH}:/usr/local/mysql/bin" >> ~/.zshrc
 
     mysql -u root -p
+
+
+I ran into a few issues so I restarted my terminal and ran these: 
+sudo /usr/local/mysql/support-files/mysql.server start
+/usr/local/mysql/bin/mysql -u root -p
+```
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 8.4.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
+```
+
 
 Get more [Docs](https://dev.mysql.com/doc/) 
