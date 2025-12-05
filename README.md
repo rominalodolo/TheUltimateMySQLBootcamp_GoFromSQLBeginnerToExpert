@@ -50,3 +50,4 @@ Installing MySQL workbench:
 
     mysql -u root -p
 
+Get more [Docs](https://dev.mysql.com/doc/) 
