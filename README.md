@@ -115,3 +115,5 @@ CREATE TABLE dogs (
 
 
 ```
+
+DESC = Describe and can use this to see the table cols and data in your specified table
