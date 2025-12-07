@@ -79,6 +79,12 @@ Then I killed the terminal to check by running `mysql --version`
 
 Get more [Docs](https://dev.mysql.com/doc/) 
 
-
+Quick Qs
 To list available databases:
 ``show databases;``
+
+The general command for creating a database:
+``CREATE DATABASE <database_name>;``
+
+A specific example:
+``CREATE DATABASE soap_store;``
