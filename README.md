@@ -78,3 +78,7 @@ Then I killed the terminal to check by running `mysql --version`
 
 
 Get more [Docs](https://dev.mysql.com/doc/) 
+
+
+To list available databases:
+``show databases;``
