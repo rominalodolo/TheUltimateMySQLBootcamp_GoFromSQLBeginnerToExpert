@@ -98,3 +98,20 @@ To use a database:
 
 <img width="1771" height="950" alt="image" src="https://github.com/user-attachments/assets/8cd49bfc-9ac3-4e64-bda1-e4f4541bd42f" />
 > MySQL and Workbench are working and tested. 
+
+```
+Creating Tables:
+
+CREATE TABLE cats (
+    name VARCHAR(50),
+    age INT
+);
+ 
+CREATE TABLE dogs (
+    name VARCHAR(50),
+    breed VARCHAR(50),
+    age INT
+);
+
+
+```
