@@ -94,3 +94,7 @@ To drop a database:
 
 To use a database:
 ``USE <database-name>;``
+
+
+<img width="1771" height="950" alt="image" src="https://github.com/user-attachments/assets/8cd49bfc-9ac3-4e64-bda1-e4f4541bd42f" />
+> MySQL and Workbench are working and tested. 
