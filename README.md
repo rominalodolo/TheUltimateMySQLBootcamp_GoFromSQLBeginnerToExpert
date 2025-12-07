@@ -117,7 +117,15 @@ CREATE TABLE dogs (
 ```
 
 DESC = Describe and can use this to see the table cols and data in your specified table
+
 See your work and if the data updated by: 
-> ``SHOW tables;`` 
+
+> ``SHOW tables;``
+> 
 > ``SHOW COLUMNS FROM cats;``
+> 
 > ``DESC cats;``
+> 
+
+
+Drop table will delete the specified table (use with caution)
