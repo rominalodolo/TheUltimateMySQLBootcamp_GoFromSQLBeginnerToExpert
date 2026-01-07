@@ -1,4 +1,4 @@
-# The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
+<img width="837" height="679" alt="image" src="https://github.com/user-attachments/assets/65cc14e9-4fde-490f-8250-057d08fe8c11" /># The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
 The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert, the Udemy course for SQL. 
 UPDATED version 2025 
 View it [HERE](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/?couponCode=UPGRADE02223)
@@ -129,3 +129,16 @@ See your work and if the data updated by:
 
 
 Drop table will delete the specified table (use with caution)
+
+Making Database to add new tables to 
+> ``CREATE DATABASE testing;``
+> 
+> ``CREATE TABLE people (first_name VARCHAR(20), last_name VARCHAR(20), age INT);``
+> 
+> ``DESC people;``
+> 
+> ``SELECT * FROM people;``
+> 
+> <img width="911" height="851" alt="image" src="https://github.com/user-attachments/assets/073dc4c4-21ba-446e-9d68-44b11c976a6f" />
+
+
