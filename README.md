@@ -1,4 +1,4 @@
-<img width="837" height="679" alt="image" src="https://github.com/user-attachments/assets/65cc14e9-4fde-490f-8250-057d08fe8c11" /># The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
+# The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
 The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert, the Udemy course for SQL. 
 UPDATED version 2025 
 View it [HERE](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/?couponCode=UPGRADE02223)
