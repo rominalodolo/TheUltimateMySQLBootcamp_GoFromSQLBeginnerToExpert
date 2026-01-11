@@ -149,4 +149,5 @@ Making Database to add new tables to
 > ``SHOW TABLES; ``
 
 ### NULL values
+No value / Unknown value 
 `` CREATE TABLE cats2 ( name VARCHAR(100) NOT NULL, age INT NOT NULL);``
