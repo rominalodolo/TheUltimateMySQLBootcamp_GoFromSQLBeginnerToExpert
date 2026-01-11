@@ -141,4 +141,12 @@ Making Database to add new tables to
 > 
 > <img width="911" height="851" alt="image" src="https://github.com/user-attachments/assets/073dc4c4-21ba-446e-9d68-44b11c976a6f" />
 
+### INSERT INTO 
+> ``INSERT INTO people (first_name, last_name, age)``
+> ``VALUES (’Vector’, ‘James’, 30), (‘Sally’, ‘Beth’, 82), (‘John’, ‘Doe’, 54);``
+> ``SELECT * FROM people; ``
+> ``DROP TABLE people; ``
+> ``SHOW TABLES; ``
 
+### NULL values
+`` CREATE TABLE cats2 ( name VARCHAR(100) NOT NULL, age INT NOT NULL);``
