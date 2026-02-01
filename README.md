@@ -916,6 +916,16 @@ WHERE author_fname LIKE '_a_';
 
 ```
 
+If there are sentences with % or _ the you can use an escape '/' character
+you use this before the character you want to use. 
 
+Example 
+-- To select books with '%' in their title:
+``SELECT * FROM books 
+WHERE title LIKE '%\%%';``
+ 
+-- To select books with an underscore '_' in title:
+``SELECT * FROM books 
+WHERE title LIKE '%\_%';``
 
 
