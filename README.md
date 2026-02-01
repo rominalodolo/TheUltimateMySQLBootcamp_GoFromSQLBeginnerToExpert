@@ -962,3 +962,5 @@ FROM books ORDER BY author_lname;
 
 ```
 
+## Aggregate Functions
+
