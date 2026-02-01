@@ -1,4 +1,4 @@
-# The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
+<img width="792" height="212" alt="image" src="https://github.com/user-attachments/assets/19fd9811-293f-437c-8d7f-6e902c3c228f" /># The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
 The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert, the Udemy course for SQL. 
 UPDATED version 2025 
 View it [HERE](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/?couponCode=UPGRADE02223)
@@ -632,6 +632,24 @@ FROM books;
 > You can use a formatter in your code editor, this one is VScode
 > 
 > <img width="2256" height="1204" alt="image" src="https://github.com/user-attachments/assets/d728899a-77b2-417f-8ff2-0f0b8d760976" />
+
+### REPLACE 
+
+<img width="2080" height="484" alt="image" src="https://github.com/user-attachments/assets/620a8fc4-8d00-4f5d-b747-1d39ba9a5679" />
+
+Example
+> Replacing text that you are calling with something else
+>
+> `` SELECT REPLACE('Hello World', 'Hell', '^&%$'); ``
+>
+> Answer: ``^&%$o World`` 
+> 
+> <img width="806" height="278" alt="image" src="https://github.com/user-attachments/assets/ea312612-dc44-4a9f-ace4-ae2667bd6899" />
+
+> **NB: case sensitive.**
+> 
+> <img width="792" height="212" alt="image" src="https://github.com/user-attachments/assets/0ac652e6-2583-460e-93d7-1517be5aa60c" />
+
 
 
 
