@@ -618,8 +618,12 @@ FROM books;
 ### Formatting SQL 
 
 > You can use this site to do that
+>
 > [Code Editor ](https://codebeautify.org/sqlformatter)
+> 
 > OR
+>
 > If the mySQL workbench you can use the paint brush tool found in the tool bar
+>
 > <img width="1838" height="1006" alt="image" src="https://github.com/user-attachments/assets/dc9228bb-4a8b-4ece-8092-5fa2b53c0f1a" />
 
