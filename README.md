@@ -650,6 +650,54 @@ Example
 > 
 > <img width="792" height="212" alt="image" src="https://github.com/user-attachments/assets/0ac652e6-2583-460e-93d7-1517be5aa60c" />
 
+Example 
+ ```
+SELECT REPLACE('Hello World', 'Hell', '%$#@');
+ 
+SELECT REPLACE('Hello World', 'l', '7');
+ 
+SELECT REPLACE('Hello World', 'o', '0');
+ 
+SELECT REPLACE('HellO World', 'o', '*');
+ 
+SELECT
+  REPLACE('cheese bread coffee milk', ' ', ' and ');
+ 
+SELECT REPLACE(title, 'e ', '3') FROM books;
+ 
+SELECT REPLACE(title, ' ', '-') FROM books;
+```
 
+
+### REVERSE
+
+<img width="1240" height="412" alt="image" src="https://github.com/user-attachments/assets/95f25974-fe61-4cf0-99a5-9a415dd5761e" />
+<img width="424" height="220" alt="image" src="https://github.com/user-attachments/assets/45296326-40db-4025-85e3-bf435ade54fe" />
+
+Example
+```
+SELECT REVERSE('Hello World');
+ 
+SELECT REVERSE('meow meow');
+ 
+SELECT REVERSE(author_fname) FROM books;
+ 
+SELECT CONCAT('woof', REVERSE('woof'));
+ 
+SELECT CONCAT(author_fname, REVERSE(author_fname)) FROM books;
+
+```
+
+
+### CHARLENGTH
+
+<img width="2128" height="964" alt="image" src="https://github.com/user-attachments/assets/454aac9c-7926-4da2-bc11-8e709d5a6eba" />
+
+> Charlength vs length are not the same, LENGTH does the byte length NOT the charater length, so how mych is being stored
+> 
+<img width="2102" height="650" alt="image" src="https://github.com/user-attachments/assets/1e12fd09-1dae-4660-a37d-3cde65f06cd1" />
+
+EXAMPLE OF HOW THIS WORKS: 
+<img width="600" height="448" alt="image" src="https://github.com/user-attachments/assets/4e61ddb0-bb7e-4687-83af-84879c7243e0" />
 
 
