@@ -481,5 +481,5 @@ DESC shirts;
 
 
 ### String Functions
-> (Docs)[https://dev.mysql.com/doc/refman/8.0/en/string-functions.html]
+> [Docs](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html)
 > 
