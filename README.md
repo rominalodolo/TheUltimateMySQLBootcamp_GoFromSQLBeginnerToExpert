@@ -578,3 +578,14 @@ Another test to see starting point
 `` SELECT SUBSTRING('Hello World', 2, 4); ``
 > Answer is ``ello``
 <img width="692" height="228" alt="image" src="https://github.com/user-attachments/assets/db3f2391-5de4-4718-a154-b895fa8b3705" />
+
+Last test to see how to go grab the last few letters of the string
+`` SELECT SUBSTRING('Hello World', 5); ``
+> Answer is  ``o World``
+<img width="616" height="272" alt="image" src="https://github.com/user-attachments/assets/d3505ecf-3d56-4f9f-8b3e-920f8cc03e09" />
+
+**You can also use a negative straing point like -3**
+> This makes it count backwards from the end of the sring
+>
+> <img width="600" height="198" alt="image" src="https://github.com/user-attachments/assets/03f21b57-9336-4ace-bd00-7067db233b63" />
+
