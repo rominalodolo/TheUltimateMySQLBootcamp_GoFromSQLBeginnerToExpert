@@ -329,3 +329,7 @@ Change tabby cats to shorthair:
 Another update:
 
 `UPDATE cats SET age=14 WHERE name='Misty';`
+
+
+## NOTE
+Always SELECT _before_ UPDATEing so you can ensure you are updating the correct item. 
