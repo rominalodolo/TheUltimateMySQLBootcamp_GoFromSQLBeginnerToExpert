@@ -157,3 +157,23 @@ Not NULL
     name VARCHAR(100) NOT NULL,
     age INT NOT NULL
 );`
+
+### DEFAULT values 
+> is setting the values to have a value even when none is being added to the col in the table. It will show that value instead
+> 
+> ``NOT NULL DEFAUT 'unnamed'``
+
+EG: 
+``CREATE TABLE cats3  (    
+    name VARCHAR(20) DEFAULT 'no name provided',    
+    age INT DEFAULT 99  
+); ``
+
+or 
+
+``CREATE TABLE cats4  (    
+    name VARCHAR(20) NOT NULL DEFAULT 'unnamed',    
+    age INT NOT NULL DEFAULT 99 
+);``
+
+
