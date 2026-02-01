@@ -788,3 +788,34 @@ FROM
 
 ## Refining Selections
 
+Adding more data to the books table: 
+```
+INSERT INTO books
+    (title, author_fname, author_lname, released_year, stock_quantity, pages)
+    VALUES ('10% Happier', 'Dan', 'Harris', 2014, 29, 256), 
+           ('fake_book', 'Freida', 'Harris', 2001, 287, 428),
+           ('Lincoln In The Bardo', 'George', 'Saunders', 2017, 1000, 367);
+
+```
+
+### DISTINCT
+
+You'll only get results that don't include duplictaes
+
+<img width="2140" height="1248" alt="image" src="https://github.com/user-attachments/assets/4e15ff8b-813f-4388-94e9-ef886d2b5d1f" />
+
+Example
+
+```
+SELECT author_lname FROM books;
+ 
+SELECT DISTINCT author_lname FROM books;
+ 
+SELECT author_fname, author_lname FROM books;
+ 
+SELECT DISTINCT CONCAT(author_fname,' ', author_lname) FROM books;
+ 
+SELECT DISTINCT author_fname, author_lname FROM books;
+
+```
+
