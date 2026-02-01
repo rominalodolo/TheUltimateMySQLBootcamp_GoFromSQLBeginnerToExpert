@@ -206,3 +206,6 @@ Example:
     age INT NOT NULL,
     PRIMARY KEY (cat_id)
 ); ``
+
+Exercise to wrap up the section
+<img width="902" height="260" alt="image" src="https://github.com/user-attachments/assets/88a1b9c8-97a0-4c11-bd7e-947bc1a5a430" />
