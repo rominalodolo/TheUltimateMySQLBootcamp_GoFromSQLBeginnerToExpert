@@ -553,3 +553,23 @@ SELECT CONCAT(author_fname,' ', author_lname) AS author_name FROM books;
  
 SELECT CONCAT_WS('-',title, author_fname, author_lname) FROM books;
 ```
+
+### SUBSTRING() & SUBSTR()
+
+<img width="1538" height="170" alt="image" src="https://github.com/user-attachments/assets/c8463525-8de3-410f-985c-89a04772318e" />
+
+<img width="2166" height="1312" alt="image" src="https://github.com/user-attachments/assets/4129bb83-e244-470f-b15e-af56b9b63c80" />
+
+> The first string is the one you want to sample from
+>
+> This you can make into a title name
+>
+> The first number you provide is the starting point
+>
+> The second numkber provided is the length of the sting you are calling.
+
+
+Example 
+`` SELECT SUBSTRING('Hello World', 1, 4); ``
+> Answer is ``Hell``
+
