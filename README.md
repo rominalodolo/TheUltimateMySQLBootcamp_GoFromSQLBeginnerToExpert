@@ -572,20 +572,54 @@ SELECT CONCAT_WS('-',title, author_fname, author_lname) FROM books;
 Example 
 `` SELECT SUBSTRING('Hello World', 1, 4); ``
 > Answer is ``Hell``
-<img width="630" height="256" alt="image" src="https://github.com/user-attachments/assets/d47f2c3d-58c5-433f-a0c7-46a085a36c60" />
+>
+> <img width="630" height="256" alt="image" src="https://github.com/user-attachments/assets/d47f2c3d-58c5-433f-a0c7-46a085a36c60" />
 
 Another test to see starting point 
 `` SELECT SUBSTRING('Hello World', 2, 4); ``
 > Answer is ``ello``
-<img width="692" height="228" alt="image" src="https://github.com/user-attachments/assets/db3f2391-5de4-4718-a154-b895fa8b3705" />
+>
+> <img width="692" height="228" alt="image" src="https://github.com/user-attachments/assets/db3f2391-5de4-4718-a154-b895fa8b3705" />
 
 Last test to see how to go grab the last few letters of the string
 `` SELECT SUBSTRING('Hello World', 5); ``
 > Answer is  ``o World``
-<img width="616" height="272" alt="image" src="https://github.com/user-attachments/assets/d3505ecf-3d56-4f9f-8b3e-920f8cc03e09" />
+>
+> <img width="616" height="272" alt="image" src="https://github.com/user-attachments/assets/d3505ecf-3d56-4f9f-8b3e-920f8cc03e09" />
 
 **You can also use a negative straing point like -3**
 > This makes it count backwards from the end of the sring
 >
 > <img width="600" height="198" alt="image" src="https://github.com/user-attachments/assets/03f21b57-9336-4ace-bd00-7067db233b63" />
+
+Example using the Books data 
+```
+SELECT SUBSTRING('Hello World', 1, 4);
+ 
+SELECT SUBSTRING('Hello World', 7);
+ 
+SELECT SUBSTRING('Hello World', -3);
+ 
+SELECT SUBSTRING(title, 1, 10) AS 'short title' FROM books;
+ 
+SELECT SUBSTR(title, 1, 10) AS 'short title' FROM books;
+```
+
+Example using the Books data by using concat then nesting the substring function 
+```
+SELECT CONCAT
+    (
+        SUBSTRING(title, 1, 10),
+        '...'
+    ) AS 'short title'
+FROM books;
+```
+
+### Formatting SQL 
+
+> You can use this site to do that
+> [Code Editor ](https://codebeautify.org/sqlformatter)
+> OR
+> If the mySQL workbench you can use the paint brush tool found in the tool bar
+> <img width="1838" height="1006" alt="image" src="https://github.com/user-attachments/assets/dc9228bb-4a8b-4ece-8092-5fa2b53c0f1a" />
 
