@@ -197,4 +197,4 @@ OR
 );``
 
 
-Primary Keys can never be NULL. They always have a value and values are always unique. 
+Primary Keys can never be NULL. They always have a value and values are always unique. Using AUTO_INCREMEANT will help you have ids that automatically increment as you add values. 
