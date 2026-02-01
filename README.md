@@ -303,3 +303,21 @@ VALUES ('Ringo', 'Tabby', 4),
 `SELECT * FROM cats WHERE age = 4; `
 
 `SELECT * FROM cats WHERE name ='Egg';`
+
+
+Select Challenges Solution
+`SELECT cat_id FROM cats;`
+
+`SELECT name, breed FROM cats;`
+
+`SELECT name, age FROM cats WHERE breed='Tabby';`
+
+`SELECT cat_id, age FROM cats WHERE cat_id=age;`
+
+`SELECT * FROM cats WHERE cat_id=age;`
+
+
+-- Use 'AS' to alias a column in your results (it doesn't actually change the name of the column in the table)
+
+`SELECT cat_id AS id, name FROM cats;`
+
