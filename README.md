@@ -357,3 +357,13 @@ Always SELECT _before_ UPDATEing so you can ensure you are updating the correct 
 `UPDATE cats SET age=12 WHERE breed='Maine Coon'; `
  
 `SELECT * FROM cats WHERE breed='Maine Coon';`
+
+
+-- Delete all cats with name of 'Egg':
+
+`DELETE FROM cats WHERE name='Egg';`
+
+
+-- Delete all rows in the cats table:
+
+`DELETE FROM cats;`
