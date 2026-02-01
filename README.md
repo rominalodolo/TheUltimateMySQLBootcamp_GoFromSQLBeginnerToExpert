@@ -1,4 +1,4 @@
-<img width="792" height="212" alt="image" src="https://github.com/user-attachments/assets/19fd9811-293f-437c-8d7f-6e902c3c228f" /># The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
+# The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
 The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert, the Udemy course for SQL. 
 UPDATED version 2025 
 View it [HERE](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/?couponCode=UPGRADE02223)
@@ -699,5 +699,17 @@ SELECT CONCAT(author_fname, REVERSE(author_fname)) FROM books;
 
 EXAMPLE OF HOW THIS WORKS: 
 <img width="600" height="448" alt="image" src="https://github.com/user-attachments/assets/4e61ddb0-bb7e-4687-83af-84879c7243e0" />
+
+Example code to play with 
+```
+SELECT CHAR_LENGTH('Hello World');
+ 
+SELECT CHAR_LENGTH(title) as length, title FROM books;
+ 
+SELECT author_lname, CHAR_LENGTH(author_lname) AS 'length' FROM books;
+ 
+SELECT CONCAT(author_lname, ' is ', CHAR_LENGTH(author_lname), ' characters long') FROM books;
+
+```
 
 
