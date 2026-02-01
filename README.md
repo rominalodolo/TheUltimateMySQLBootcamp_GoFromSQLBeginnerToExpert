@@ -698,9 +698,11 @@ SELECT CONCAT(author_fname, REVERSE(author_fname)) FROM books;
 <img width="2102" height="650" alt="image" src="https://github.com/user-attachments/assets/1e12fd09-1dae-4660-a37d-3cde65f06cd1" />
 
 EXAMPLE OF HOW THIS WORKS: 
+
 <img width="600" height="448" alt="image" src="https://github.com/user-attachments/assets/4e61ddb0-bb7e-4687-83af-84879c7243e0" />
 
-Example code to play with 
+Example code to play with:
+
 ```
 SELECT CHAR_LENGTH('Hello World');
  
@@ -712,4 +714,45 @@ SELECT CONCAT(author_lname, ' is ', CHAR_LENGTH(author_lname), ' characters long
 
 ```
 
+### LOWWER and UPPER 
+
+> Returns your query in upper or lower case
+>
+> Example: 
+```
+SELECT UPPER('Hello World');
+ 
+SELECT LOWER('Hello World');
+ 
+SELECT UPPER(title) FROM books;
+ 
+SELECT CONCAT('MY FAVORITE BOOK IS ', UPPER(title)) FROM books;
+ 
+SELECT CONCAT('MY FAVORITE BOOK IS ', LOWER(title)) FROM books;
+
+```
+
+### RIGHT or LEFT  or REPEAT  or TRIM
+
+<img width="1354" height="420" alt="image" src="https://github.com/user-attachments/assets/e7e60d1f-c632-46ea-b290-c11b3173905d" />
+
+<img width="1354" height="430" alt="image" src="https://github.com/user-attachments/assets/9c6a5993-a73f-4126-8315-0e42e8ea04bb" />
+
+<img width="2130" height="354" alt="image" src="https://github.com/user-attachments/assets/921e26f9-e630-4dde-8bac-f5d2cdee356a" />
+
+<img width="2090" height="718" alt="image" src="https://github.com/user-attachments/assets/93d671f3-16a5-4354-abb4-5dee4315ad63" />
+>> Removes trailing spaces not all the spaces in the words unless you specify
+
+Example
+```
+SELECT INSERT('Hello Bobby', 6, 0, 'There'); 
+ 
+SELECT LEFT('omghahalol!', 3);
+ 
+SELECT RIGHT('omghahalol!', 4);
+ 
+SELECT REPEAT('ha', 4);
+ 
+SELECT TRIM('  pickle  ');
+```
 
