@@ -169,11 +169,32 @@ EG:
     age INT DEFAULT 99  
 ); ``
 
-or 
+OR 
 
 ``CREATE TABLE cats4  (    
     name VARCHAR(20) NOT NULL DEFAULT 'unnamed',    
     age INT NOT NULL DEFAULT 99 
 );``
+
+
+### Primary Keys 
+Adding unique identifiers to tables so that each record has an ID that uniquely distinguishes it from others.
+
+``Specifing Primary Keys example: 
+CREATE TABLE unique_cats (
+	cat_id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL
+);``
+
+OR 
+
+``CREATE TABLE unique_cats2 (
+	cat_id INT,
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL,
+    PRIMARY KEY (cat_id)
+);``
+
 
 
