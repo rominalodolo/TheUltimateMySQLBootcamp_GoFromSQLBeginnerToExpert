@@ -414,3 +414,13 @@ VALUES
 INSERT INTO shirts (article, color, shirt_size, last_worn)
 VALUES ('polo shirt','purple', 'M', 50);
 ```
+
+
+Using Select in the exercise
+```
+SELECT article, color FROM shirts;
+ 
+SELECT * FROM shirts WHERE shirt_size='M';
+ 
+SELECT article, color, shirt_size, last_worn FROM shirts WHERE shirt_size='M';
+```
