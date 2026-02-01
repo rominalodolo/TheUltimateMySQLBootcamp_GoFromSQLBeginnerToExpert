@@ -572,4 +572,9 @@ SELECT CONCAT_WS('-',title, author_fname, author_lname) FROM books;
 Example 
 `` SELECT SUBSTRING('Hello World', 1, 4); ``
 > Answer is ``Hell``
+<img width="630" height="256" alt="image" src="https://github.com/user-attachments/assets/d47f2c3d-58c5-433f-a0c7-46a085a36c60" />
 
+Another test to see starting point 
+`` SELECT SUBSTRING('Hello World', 2, 4); ``
+> Answer is ``ello``
+<img width="692" height="228" alt="image" src="https://github.com/user-attachments/assets/db3f2391-5de4-4718-a154-b895fa8b3705" />
