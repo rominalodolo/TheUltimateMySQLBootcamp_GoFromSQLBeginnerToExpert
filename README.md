@@ -289,7 +289,7 @@ VALUES ('Ringo', 'Tabby', 4),
 
 -- To only get the age column:
 
-`SELECT age FROM cats;``
+`SELECT age FROM cats;`
 
 
 
