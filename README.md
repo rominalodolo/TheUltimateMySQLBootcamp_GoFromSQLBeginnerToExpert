@@ -523,3 +523,24 @@ VALUES
 ('Consider the Lobster', 'David', 'Foster Wallace', 2005, 92, 343);
 
 ```
+
+### CONCAT 
+
+> Concatenate which means combining 2 strings. 
+>
+> We can use this to combine titles of columns and other data
+>
+
+
+### CONCAT_WS
+
+> It means Concatenate with seperator
+>
+> It'll concat but with a seperator which would be the first item in the srting of things you want to join.
+>
+> So if you join it like " " and then your titles "firstname" "lastname"  you should get `firstname lastname"
+> but just adding an extra white space is bad practice so rather use "-" dashes or unerscores like this "_"
+>
+> If you are just SELECTing data the you can add the white spaces for readability and using it for reporting
+>
+> 
