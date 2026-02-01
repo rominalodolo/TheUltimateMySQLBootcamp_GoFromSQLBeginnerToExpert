@@ -626,4 +626,12 @@ FROM books;
 > If the mySQL workbench you can use the paint brush tool found in the tool bar
 >
 > <img width="1838" height="1006" alt="image" src="https://github.com/user-attachments/assets/dc9228bb-4a8b-4ece-8092-5fa2b53c0f1a" />
+>
+> OR
+>
+> You can use a formatter in your code editor, this one is VScode
+> 
+> <img width="2256" height="1204" alt="image" src="https://github.com/user-attachments/assets/d728899a-77b2-417f-8ff2-0f0b8d760976" />
+
+
 
