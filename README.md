@@ -825,5 +825,17 @@ SELECT DISTINCT author_fname, author_lname FROM books;
 > Ascends by default.
 >
 > <img width="2132" height="724" alt="image" src="https://github.com/user-attachments/assets/10d76d46-7377-453b-b0b0-f1631bc43935" />
+>
+> Example
+```
+SELECT * FROM books
+ORDER BY author_lname;
+ 
+SELECT * FROM books
+ORDER BY author_lname DESC;
+ 
+SELECT * FROM books
+ORDER BY released_year;
+```
 
 
