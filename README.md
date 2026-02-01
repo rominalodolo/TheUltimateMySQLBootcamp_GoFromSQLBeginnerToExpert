@@ -197,4 +197,4 @@ OR
 );``
 
 
-
+Primary Keys can never be NULL. They always have a value and values are always unique. 
