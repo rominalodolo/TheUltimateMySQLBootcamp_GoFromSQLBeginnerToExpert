@@ -543,4 +543,13 @@ VALUES
 >
 > If you are just SELECTing data the you can add the white spaces for readability and using it for reporting
 >
-> 
+
+ Exapmle 
+
+ ```
+SELECT CONCAT('pi', 'ckle');
+ 
+SELECT CONCAT(author_fname,' ', author_lname) AS author_name FROM books;
+ 
+SELECT CONCAT_WS('-',title, author_fname, author_lname) FROM books;
+```
