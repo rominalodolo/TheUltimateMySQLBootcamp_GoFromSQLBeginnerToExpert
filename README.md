@@ -84,9 +84,9 @@ Then I killed the terminal to check by running `mysql --version`
 > > If you see something like: ` drwx------  root  wheel`
 > > or owned by your user instead of mysql, then that would be this permissions issue.
 > >
-> > I got this result: ` ls -ld /usr/local/mysql/data
-drwxr-x---@ 33 rominalodolo  _mysql  1056 Feb  2 09:06 /usr/local/mysql/data
-rominalodolo@Rominas-MacBook-Pro-2 ~ % sudo chown -R _mysql:_mysql /usr/local/mysql/data `
+> > I got this result: ``` ls -ld /usr/local/mysql/data
+> > drwxr-x---@ 33 rominalodolo  _mysql  1056 Feb  2 09:06 /usr/local/mysql/data
+> > rominalodolo@Rominas-MacBook-Pro-2 ~ % sudo chown -R _mysql:_mysql /usr/local/mysql/data ```
 > >
 
 
