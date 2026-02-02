@@ -88,6 +88,30 @@ Then I killed the terminal to check by running `mysql --version`
 > > drwxr-x---@ 33 rominalodolo  _mysql  1056 Feb  2 09:06 /usr/local/mysql/data
 > > rominalodolo@Rominas-MacBook-Pro-2 ~ % sudo chown -R _mysql:_mysql /usr/local/mysql/data ```
 > >
+> >	Breaking it down:
+> >```
+> >rominalodolo → owner user
+> >_mysql → group
+> >Permissions: drwxr-x--- →
+> >Owner (rominalodolo) → read/write/execute ✅
+> >Group (_mysql) → read/execute ✅ (no write ❌)
+> >Others → nothing
+> >```
+> >
+> > ### The fix
+> > Change the ownership so the MySQL server user _mysql owns the folder
+> > ` sudo chown -R _mysql:_mysql /usr/local/mysql/data `
+> >
+> > Then make sure permissions are okay:
+> > ` sudo chmod -R 750 /usr/local/mysql/data`
+> >
+> > 7 → owner _mysql can read/write/execute
+> > 5 → group can read/execute
+> > 0 → others nothing
+> >
+> > Checking permissions : ` ls -la /usr/local/mysql/data `
+> >
+> >
 
 
 
