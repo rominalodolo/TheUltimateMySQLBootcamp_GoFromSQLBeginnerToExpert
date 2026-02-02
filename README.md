@@ -1,4 +1,4 @@
-<img width="1105" height="693" alt="Screenshot 2026-02-02 at 11 58 58" src="https://github.com/user-attachments/assets/afee4a77-3dbf-40cf-8b08-a06ad295ef9a" /># The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
+# The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
 The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert, the Udemy course for SQL. 
 UPDATED version 2025 
 View it [HERE](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/?couponCode=UPGRADE02223)
@@ -78,41 +78,40 @@ Then I killed the terminal to check by running `mysql --version`
 ### Issues on a new laptop with setting up permissions for mysql and solutions
 > 
 > <img width="2022" height="1100" alt="Snip20260201_30" src="https://github.com/user-attachments/assets/9f92911a-d989-4608-ac91-e9eb099362d4" />
-> >
-> > Run this command to check ` ls -ld /usr/local/mysql/data `
-> >
-> > If you see something like: ` drwx------  root  wheel`
-> > or owned by your user instead of mysql, then that would be this permissions issue.
-> >
-> > I got this result: ``` ls -ld /usr/local/mysql/data
-> > drwxr-x---@ 33 rominalodolo  _mysql  1056 Feb  2 09:06 /usr/local/mysql/data
-> > rominalodolo@Rominas-MacBook-Pro-2 ~ % sudo chown -R _mysql:_mysql /usr/local/mysql/data ```
-> >
-> >	Breaking it down:
-> >```
-> >rominalodolo → owner user
-> >_mysql → group
-> >Permissions: drwxr-x--- →
-> >Owner (rominalodolo) → read/write/execute ✅
-> >Group (_mysql) → read/execute ✅ (no write ❌)
-> >Others → nothing
-> >```
-> >
-> > ### The fix
-> > Change the ownership so the MySQL server user _mysql owns the folder
-> > ` sudo chown -R _mysql:_mysql /usr/local/mysql/data `
-> >
-> > Then make sure permissions are okay:
-> > ` sudo chmod -R 750 /usr/local/mysql/data`
-> >
-> > 7 → owner _mysql can read/write/execute
-> > 5 → group can read/execute
-> > 0 → others nothing
-> >
-> > Checking permissions : ` ls -la /usr/local/mysql/data `
-> >
-> > <img width="1105" height="693" alt="Screenshot 2026-02-02 at 11 58 58" src="https://github.com/user-attachments/assets/54210bc6-00a9-4c1e-b9d9-c43a519e1e2e" />
+> 
+>  Run this command to check ` ls -ld /usr/local/mysql/data `
+> 
+>  If you see something like: ` drwx------  root  wheel`
+> or owned by your user instead of mysql, then that would be this permissions issue.
+> 
+>  I got this result:
+```
+	ls -ld /usr/local/mysql/data
+ drwxr-x---@ 33 rominalodolo  _mysql  1056 Feb  2 09:06 /usr/local/mysql/data
+ rominalodolo@Rominas-MacBook-Pro-2 ~ % sudo chown -R _mysql:_mysql /usr/local/mysql/data
+```
+rominalodolo → owner user
+_mysql → group
+Permissions: drwxr-x--- →
+Owner (rominalodolo) → read/write/execute ✅
+Group (_mysql) → read/execute ✅ (no write ❌)
 
+ ### The fix
+Change the ownership so the MySQL server user _mysql owns the folder
+` sudo chown -R _mysql:_mysql /usr/local/mysql/data `
+
+Then make sure permissions are okay:
+` sudo chmod -R 750 /usr/local/mysql/data`
+
+> 7 → owner _mysql can read/write/execute
+> 5 → group can read/execute
+> 0 → others nothing
+
+Checking permissions : ` ls -la /usr/local/mysql/data `
+ <img width="1105" height="693" alt="Screenshot 2026-02-02 at 11 58 58" src="https://github.com/user-attachments/assets/54210bc6-00a9-4c1e-b9d9-c43a519e1e2e" />
+
+
+Still did not work so I removed Mysql and workbench from my laptop, restared the laptop and downloaded the workbench and server files for sql. 
 
 
 Get more [Docs](https://dev.mysql.com/doc/) 
