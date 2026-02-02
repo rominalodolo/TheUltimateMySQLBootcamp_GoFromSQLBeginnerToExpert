@@ -1,4 +1,4 @@
-# The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
+<img width="1105" height="693" alt="Screenshot 2026-02-02 at 11 58 58" src="https://github.com/user-attachments/assets/afee4a77-3dbf-40cf-8b08-a06ad295ef9a" /># The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
 The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert, the Udemy course for SQL. 
 UPDATED version 2025 
 View it [HERE](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/?couponCode=UPGRADE02223)
@@ -111,7 +111,7 @@ Then I killed the terminal to check by running `mysql --version`
 > >
 > > Checking permissions : ` ls -la /usr/local/mysql/data `
 > >
-> >
+> > <img width="1105" height="693" alt="Screenshot 2026-02-02 at 11 58 58" src="https://github.com/user-attachments/assets/54210bc6-00a9-4c1e-b9d9-c43a519e1e2e" />
 
 
 
