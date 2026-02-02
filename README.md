@@ -75,6 +75,20 @@ Then I killed the terminal to check by running `mysql --version`
 <img width="505" height="110" alt="image" src="https://github.com/user-attachments/assets/8ec4022f-a817-481c-93d7-bf32e06e64c6" />
 <img width="202" height="143" alt="image" src="https://github.com/user-attachments/assets/906856ea-1865-41ec-948f-15ba628846ce" />
 
+### Issues on a new laptop with setting up permissions for mysql and solutions
+> 
+> <img width="2022" height="1100" alt="Snip20260201_30" src="https://github.com/user-attachments/assets/9f92911a-d989-4608-ac91-e9eb099362d4" />
+> >
+> > Run this command to check ` ls -ld /usr/local/mysql/data `
+> >
+> > If you see something like: ` drwx------  root  wheel`
+> > or owned by your user instead of mysql, then that would be this permissions issue.
+> >
+> > I got this result: ` ls -ld /usr/local/mysql/data
+drwxr-x---@ 33 rominalodolo  _mysql  1056 Feb  2 09:06 /usr/local/mysql/data
+rominalodolo@Rominas-MacBook-Pro-2 ~ % sudo chown -R _mysql:_mysql /usr/local/mysql/data `
+> >
+
 
 
 Get more [Docs](https://dev.mysql.com/doc/) 
