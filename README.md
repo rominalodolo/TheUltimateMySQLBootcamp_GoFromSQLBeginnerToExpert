@@ -116,6 +116,7 @@ Checking permissions : ` ls -la /usr/local/mysql/data `
 
 Still did not work so I removed Mysql and workbench from my laptop, restared the laptop and downloaded the workbench and server files for sql. 
 
+---
 
 Get more [Docs](https://dev.mysql.com/doc/) 
 
