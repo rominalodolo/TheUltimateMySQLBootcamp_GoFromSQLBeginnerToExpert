@@ -1,6 +1,9 @@
 # The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
+
 The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert, the Udemy course for SQL. 
+
 UPDATED version 2025 
+
 View it [HERE](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/?couponCode=UPGRADE02223)
 
 Currently running through this course, 2 December 2025. 
