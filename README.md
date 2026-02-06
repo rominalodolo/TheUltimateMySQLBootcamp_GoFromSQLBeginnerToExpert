@@ -1005,3 +1005,19 @@ FROM books ORDER BY author_lname;
 
 ## Aggregate Functions
 
+#### COUNT 
+
+`SELECT COUNT (*) FROM books;` this gets back the rows - select the number of rows from books 
+
+doesn't play nice to do multiple with functions. Just run it without other functions. 
+
+`SELECT COUNT(*) FROM books;`
+ 
+`SELECT COUNT(author_lname) FROM books;`
+ 
+`SELECT COUNT(DISTINCT author_lname) FROM books;`
+ 
+`SELECT COUNT(*) FROM books WHERE title LIKE '%the%';`
+
+#### GROUP BY
+
