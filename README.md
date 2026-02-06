@@ -1109,3 +1109,33 @@ FROM books GROUP BY author_lname, author_fname;
 ```
 
 <img width="1313" height="909" alt="Screenshot 2026-02-06 at 14 48 23" src="https://github.com/user-attachments/assets/578b3aa6-20db-4579-9b96-4f200e4d9d80" />
+
+
+#### SUM 
+
+Example: 
+` SELECT SUM(pages) FROM books;`
+ 
+ ```
+SELECT author_lname, COUNT(*), SUM(pages)
+FROM books
+GROUP BY author_lname;
+```
+
+
+#### AVG 
+
+`SELECT AVG(pages) FROM books;`
+
+`SELECT AVG(released_year) FROM books;`
+
+
+```
+SELECT 
+    released_year, 
+    AVG(stock_quantity), 
+    COUNT(*) FROM books
+GROUP BY released_year;
+```
+
+
