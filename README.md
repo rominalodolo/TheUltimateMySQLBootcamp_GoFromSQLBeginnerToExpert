@@ -1021,3 +1021,23 @@ doesn't play nice to do multiple with functions. Just run it without other funct
 
 #### GROUP BY
 
+"GROUP BY summarises or aggregates identical data into single rows"
+
+```
+SELECT author_lname, COUNT(*) 
+FROM books
+GROUP BY author_lname;
+ 
+SELECT 
+    author_lname, COUNT(*) AS books_written
+FROM
+    books
+GROUP BY author_lname
+ORDER BY books_written DESC;
+```
+
+What this looks like in Workbench:
+
+<img width="1313" height="909" alt="Screenshot 2026-02-06 at 13 59 26" src="https://github.com/user-attachments/assets/c4a4a30f-3dd2-4ec3-a995-27990d2371b8" />
+
+
