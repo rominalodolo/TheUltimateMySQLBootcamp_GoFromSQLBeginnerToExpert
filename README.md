@@ -1040,4 +1040,72 @@ What this looks like in Workbench:
 
 <img width="1313" height="909" alt="Screenshot 2026-02-06 at 13 59 26" src="https://github.com/user-attachments/assets/c4a4a30f-3dd2-4ec3-a995-27990d2371b8" />
 
+#### MIN & MAX 
 
+`SELECT MAX(pages) FROM books;`
+ 
+`SELECT MIN(author_lname) FROM books;`
+
+
+#### Subqueries 
+
+``` SELECT title, pages FROM books
+WHERE pages = (SELECT MAX(pages) FROM books);
+ 
+SELECT MIN(released_year) FROM books;
+ 
+SELECT title, released_year FROM books 
+WHERE released_year = (SELECT MIN(released_year) FROM books);
+```
+
+<img width="1313" height="909" alt="Screenshot 2026-02-06 at 14 14 40" src="https://github.com/user-attachments/assets/109ca11e-b90d-429f-9a29-b626903a7882" />
+
+
+
+#### GROUP BY multiple columns
+
+```
+SELECT author_fname, author_lname, COUNT(*) 
+FROM books 
+GROUP BY author_lname, author_fname;
+ 
+ 
+SELECT CONCAT(author_fname, ' ', author_lname) AS author,  COUNT(*)
+FROM books
+GROUP BY author;
+```
+<img width="1313" height="909" alt="Screenshot 2026-02-06 at 14 25 36" src="https://github.com/user-attachments/assets/5fc94d94-6952-47af-8a38-b1bea8a3f293" />
+
+
+#### MIN and MAX with GROUP BY 
+
+The question is "Find the year each author published their first book. 
+
+
+`SELECT author_lname, MIN(released_year) FROM books GROUP BY author_lname;`
+ 
+`SELECT author_lname, MAX(released_year), MIN(released_year) FROM books GROUP BY author_lname;`
+
+
+ ```
+SELECT 
+	author_lname, 
+	COUNT(*) as books_written, 
+	MAX(released_year) AS latest_release,
+	MIN(released_year)  AS earliest_release,
+      MAX(pages) AS longest_page_count
+FROM books GROUP BY author_lname;
+ ```
+
+
+ ```
+SELECT 
+	author_lname, 
+        author_fname,
+	COUNT(*) as books_written, 
+	MAX(released_year) AS latest_release,
+	MIN(released_year)  AS earliest_release
+FROM books GROUP BY author_lname, author_fname;
+```
+
+<img width="1313" height="909" alt="Screenshot 2026-02-06 at 14 48 23" src="https://github.com/user-attachments/assets/578b3aa6-20db-4579-9b96-4f200e4d9d80" />
