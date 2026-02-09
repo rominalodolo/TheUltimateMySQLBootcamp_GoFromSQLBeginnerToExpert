@@ -1169,3 +1169,35 @@ FROM books
 GROUP BY released_year
 ORDER BY released_year;
 ```
+
+
+### Data Types 
+
+#### CHAR vs VARCHAR 
+
+Docs: https://dev.mysql.com/doc/refman/8.0/en/string-types.html 
+- "The CHAR and VARCHAR types are similar, but differ in the way they are stored and retrieved. They also differ in maximum length and in whether trailing spaces are retained."
+
+CHAR (0 to 255) Always specify how many characters you want to retrieve. Use for all fixed amount of items you want like cell number etc. 
+VARCHAR (0 to 65,535)
+
+<img width="659" height="162" alt="Screenshot 2026-02-09 at 22 46 04" src="https://github.com/user-attachments/assets/76fe9019-a5be-4e79-8ecf-4bdf6d02c691" />
+
+
+
+#### NUMERIC: INT TINYINT BIGINT ...
+<img width="1155" height="222" alt="Screenshot 2026-02-09 at 22 52 42" src="https://github.com/user-attachments/assets/e5fb8d14-13fb-4379-8a27-6081621e6897" />
+
+
+#### DECIMAL
+
+
+#### FLOAT and DOUBLE 
+
+
+
+#### DATE and TIME 
+
+
+
+
