@@ -1355,8 +1355,12 @@ SELECT * FROM tweets;
 
 ## Comparison & Logical Operators
 
-Not Equal operator !=
+NOT EQUAL operator !=
 
 ``SELECT * FROM books
 WHERE released_year != 2017;``
 
+NOT LIKE
+``SELECT * FROM books
+WHERE title NOT LIKE '%e%';
+``
