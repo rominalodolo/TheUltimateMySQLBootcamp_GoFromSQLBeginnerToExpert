@@ -1351,3 +1351,12 @@ SELECT * FROM tweets;
 INSERT INTO tweets (content, username) VALUES('this is my second tweet', 'coltscat');
 SELECT * FROM tweets;
 ```
+
+
+## Comparison & Logical Operators
+
+Not Equal operator !=
+
+``SELECT * FROM books
+WHERE released_year != 2017;``
+
