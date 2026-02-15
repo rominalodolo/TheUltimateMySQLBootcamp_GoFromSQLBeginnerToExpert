@@ -1427,10 +1427,164 @@ both conditions can be true to produce results
 
 Between
 ``
+SELECT title, released_year FROM books
+WHERE released_year <= 2015
+AND released_year >= 2004;
+``
 
+ ``
+SELECT title, released_year FROM books
+WHERE released_year BETWEEN 2004 AND 2014;
 ``
 
 Comparing Data
 
+``
+SELECT * FROM people WHERE birthtime 
+BETWEEN CAST('12:00:00' AS TIME) 
+AND CAST('16:00:00' AS TIME);
+`` 
 
+ ``
+SELECT * FROM people WHERE HOUR(birthtime)
+BETWEEN 12 AND 16;
+``
+
+CAST
+<img width="1144" height="433" alt="image" src="https://github.com/user-attachments/assets/0f5d5bbb-19c4-43d3-adcf-0615296f00df" />
+
+
+IN operator 
+
+``
+SELECT title, author_lname FROM books
+WHERE author_lname = 'Carver' 
+OR author_lname = 'Lahiri'
+OR author_lname = 'Smith';
+``
+
+`` 
+SELECT title, author_lname FROM books
+WHERE author_lname IN ('Carver', 'Lahiri', 'Smith');
+``
+
+ ``
+SELECT title, author_lname FROM books
+WHERE author_lname NOT IN ('Carver', 'Lahiri', 'Smith');
+`` 
+
+`` 
+SELECT title, released_year FROM books
+WHERE released_year >= 2000 
+AND released_year % 2 = 1;
+``
+
+CASE
+
+``
+SELECT title, released_year,
+CASE
+	WHEN released_year >= 2000 THEN 'modern lit'
+    ELSE '20th century lit' 
+END AS genre
+FROM books;
+``
+ 
+`` 
+SELECT 
+    title,
+    stock_quantity,
+    CASE
+        WHEN stock_quantity BETWEEN 0 AND 40 THEN '*'
+        WHEN stock_quantity BETWEEN 41 AND 70 THEN '**'
+        WHEN stock_quantity BETWEEN 71 AND 100 THEN '***'
+        WHEN stock_quantity BETWEEN 101 AND 140 THEN '****'
+        ELSE '*****'
+    END AS stock
+FROM
+    books;
+ ``
+
+`` 
+SELECT 
+    title,
+    stock_quantity,
+    CASE
+        WHEN stock_quantity <= 40 THEN '*'
+        WHEN stock_quantity <= 70 THEN '**'
+        WHEN stock_quantity <= 100 THEN '***'
+        WHEN stock_quantity <= 140 THEN '****'
+        ELSE '*****'
+    END AS stock
+FROM
+    books;
+``    
+
+
+
+
+Exercise
+
+`SELECT * FROM books WHERE released_year < 1980;`
+<img width="517" height="400" alt="Screenshot 2026-02-15 at 20 54 38" src="https://github.com/user-attachments/assets/c044fad4-9cdc-4cc1-88b5-02ccc189b5cf" />
+
+ 
+``SELECT * FROM books 
+WHERE author_lname = 'Eggers'
+OR author_lname = 'Chabon';``
+<img width="514" height="344" alt="Screenshot 2026-02-15 at 20 56 30" src="https://github.com/user-attachments/assets/7b94bdf7-1839-4e0e-bf17-d4474a357aed" />
+
+ 
+``SELECT * FROM books
+WHERE author_lname = 'Lahiri'
+AND released_year > 2000;``
+
+ 
+``SELECT * FROM books
+WHERE pages >= 100 
+AND pages <= 200;``
+
+ 
+``SELECT * FROM books
+WHERE pages BETWEEN 100 and 200;``
+
+ 
+``SELECT title, author_lname FROM books
+WHERE author_lname LIKE 'C%'
+OR author_lname LIKE 'S%';``
+
+ 
+``SELECT title, author_lname
+FROM books WHERE SUBSTR(author_lname, 1, 1) in ('C', 'S');``
+
+
+ ```
+SELECT title, author_lname,
+CASE
+    WHEN title LIKE '%stories%' THEN 'Short Stories'
+    WHEN title = 'Just Kids' THEN 'Memoir' 
+    WHEN title = 'A Heartbreaking Work of Staggering Genius' THEN 'Memior'
+    ELSE 'Novel'
+END AS type
+FROM books;
+ ```
+<img width="675" height="620" alt="image" src="https://github.com/user-attachments/assets/0474b159-5af5-4480-ae62-f041c980868c" />
+
+ ```
+SELECT author_fname, author_lname,
+	CASE
+        WHEN COUNT(*) = 1 THEN '1 book'
+        ELSE CONCAT(COUNT(*), ' books')
+	END AS count
+FROM books
+WHERE author_lname IS NOT NULL
+GROUP BY author_fname, author_lname;
+
+```
+<img width="381" height="479" alt="image" src="https://github.com/user-attachments/assets/37634661-b1b1-46e2-ace5-4e12f7f4c026" />
+
+
+### Constraints and ALTER TABLE 
+
+UNIQUE Constraint
 
