@@ -1746,5 +1746,36 @@ ADD CONSTRAINT positive_pprice CHECK (purchase_price >= 0);
 
 ### One to Many and Joins
 
+```
+CREATE TABLE customers (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(50)
+);
+ 
+CREATE TABLE orders (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    order_date DATE,
+    amount DECIMAL(8,2),
+    customer_id INT,
+    FOREIGN KEY (customer_id) REFERENCES customers(id)
+);
+ 
+INSERT INTO customers (first_name, last_name, email) 
+VALUES ('Boy', 'George', 'george@gmail.com'),
+       ('George', 'Michael', 'gm@gmail.com'),
+       ('David', 'Bowie', 'david@gmail.com'),
+       ('Blue', 'Steele', 'blue@gmail.com'),
+       ('Bette', 'Davis', 'bette@aol.com');
+       
+       
+INSERT INTO orders (order_date, amount, customer_id)
+VALUES ('2016-02-10', 99.99, 1),
+       ('2017-11-11', 35.50, 1),
+       ('2014-12-12', 800.67, 2),
+       ('2015-01-03', 12.50, 2),
+       ('1999-04-11', 450.25, 5);
+```
 
-
+<img width="951" height="593" alt="image" src="https://github.com/user-attachments/assets/1c020579-7690-4665-9c0c-f4fa3eae207a" />
