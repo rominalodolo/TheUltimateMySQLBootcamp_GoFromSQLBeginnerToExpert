@@ -1996,7 +1996,22 @@ ORDER BY average DESC;
 
 ### Many to Many 
 
+> Examples
+>
+> Authers and books - many authers for scientific works for many diffent papers
+>
+> Posts and their tags - like blog posts
+>
+> Students and classes - many studnets take lots of classes and some of them can overlap
 
+
+The example we work with for this section are tv shows and the reviewers like of like Rotton Tomato 
+
+We use Union table 
+
+Series data and reviewer data : they are connected with a reviews tables 
+
+<img width="924" height="650" alt="image" src="https://github.com/user-attachments/assets/e62ce07c-0994-49fe-80e3-b5407c54c09f" />
 
 
 
