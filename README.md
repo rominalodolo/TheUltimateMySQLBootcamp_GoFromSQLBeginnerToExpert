@@ -1735,5 +1735,16 @@ CHANGE business biz_name VARCHAR(50);``
 
 #### ALTER TABLE: Constraints
 
+``
+ALTER TABLE houses 
+ADD CONSTRAINT positive_pprice CHECK (purchase_price >= 0);
+``
+
+
+`ALTER TABLE houses DROP CONSTRAINT positive_pprice;`
+
+
+### One to Many and Joins
+
 
 
