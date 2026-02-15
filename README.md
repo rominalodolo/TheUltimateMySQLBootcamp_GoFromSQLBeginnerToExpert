@@ -1586,5 +1586,124 @@ GROUP BY author_fname, author_lname;
 
 ### Constraints and ALTER TABLE 
 
-UNIQUE Constraint
+#### UNIQUE Constraint
+
+```
+CREATE TABLE contacts (
+	name VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL UNIQUE
+);
+ 
+INSERT INTO contacts (name, phone)
+VALUES ('billybob', '8781213455');
+ 
+-- This insert would result in an error:
+INSERT INTO contacts (name, phone)
+VALUES ('billybob', '8781213455');
+
+```
+<img width="675" height="365" alt="image" src="https://github.com/user-attachments/assets/536a41d5-1c5d-4e7a-a2ef-4df67d39e290" />
+
+I ran these inividually otherwise the last line throws the error and nothing adds.
+
+#### CHECK constraints
+
+```
+CREATE TABLE users (
+	username VARCHAR(20) NOT NULL,
+    age INT CHECK (age > 0)
+);
+```
+
+<img width="935" height="538" alt="image" src="https://github.com/user-attachments/assets/a94ef6be-4d24-4f4b-8093-08a9369fca81" />
+
+
+`` 
+CREATE TABLE palindromes (
+  word VARCHAR(100) CHECK(REVERSE(word) = word)
+)
+``
+
+<img width="935" height="538" alt="image" src="https://github.com/user-attachments/assets/8ece2310-4d4e-4103-b2c3-141f436621f6" />
+
+
+#### Named constraints 
+
+``
+CREATE TABLE users2 (
+    username VARCHAR(20) NOT NULL,
+    age INT,
+    CONSTRAINT age_not_negative CHECK (age >= 0)
+);
+``
+<img width="935" height="538" alt="image" src="https://github.com/user-attachments/assets/a3898c41-2295-4686-830d-ad6b44c6e8ee" />
+
+
+ ``
+CREATE TABLE palindromes2 (
+  word VARCHAR(100),
+  CONSTRAINT word_is_palindrome CHECK(REVERSE(word) = word)
+);
+``
+<img width="935" height="538" alt="image" src="https://github.com/user-attachments/assets/67132f07-8b35-4bf7-b66c-5556ec4b1898" />
+
+
+#### Multiple Column Constraints
+
+``
+CREATE TABLE companies (
+    name VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    CONSTRAINT name_address UNIQUE (name , address)
+);
+``
+<img width="951" height="557" alt="image" src="https://github.com/user-attachments/assets/ab0cdf46-065e-4a3d-9a7f-b5b8527ef507" />
+
+
+`` 
+CREATE TABLE houses (
+  purchase_price INT NOT NULL,
+  sale_price INT NOT NULL,
+  CONSTRAINT sprice_gt_pprice CHECK(sale_price >= purchase_price)
+);
+``
+<img width="951" height="577" alt="image" src="https://github.com/user-attachments/assets/26c989c0-50c5-4279-84a4-b4d7d1636c93" />
+
+
+#### ALTER TABLE: Adding columns
+
+We can add colunns by altering the table.
+
+``
+ALTER TABLE companies 
+ADD COLUMN phone VARCHAR(15);
+``
+<img width="1902" height="1186" alt="image" src="https://github.com/user-attachments/assets/8b35cf01-aebf-4b7d-b9ef-3b3e743c7775" />
+
+
+`` 
+ALTER TABLE companies
+ADD COLUMN employee_count INT NOT NULL DEFAULT 1;
+``
+<img width="951" height="593" alt="image" src="https://github.com/user-attachments/assets/76b3f71e-f952-45bf-89f4-fc4fcda8fdc3" />
+
+
+
+#### ALTER TABLE: Removing columns
+
+The same as Adding you are just removing a col 
+
+`ALTER TABLE companies DROP COLUMN phone;`
+
+<img width="951" height="593" alt="image" src="https://github.com/user-attachments/assets/73942286-e328-4ea9-99d3-4f57ed97e0cd" />
+
+
+
+#### ALTER TABLE: Renaming tables
+
+A list of seeing our tables: 
+
+<img width="1902" height="1186" alt="image" src="https://github.com/user-attachments/assets/5579c888-727f-4ace-9dc3-a759faf10ea0" />
+
+
 
