@@ -1699,11 +1699,41 @@ The same as Adding you are just removing a col
 
 
 
-#### ALTER TABLE: Renaming tables
+#### ALTER TABLE: Renaming
 
 A list of seeing our tables: 
 
 <img width="1902" height="1186" alt="image" src="https://github.com/user-attachments/assets/5579c888-727f-4ace-9dc3-a759faf10ea0" />
+
+`RENAME TABLE companies to suppliers;`
+
+<img width="951" height="593" alt="image" src="https://github.com/user-attachments/assets/aaca56b5-a430-4a9d-bdde-399c091ff87f" />
+
+
+`ALTER TABLE suppliers RENAME TO companies;`
+
+
+``
+ALTER TABLE companies
+RENAME COLUMN name TO company_name;
+``
+
+<img width="1902" height="1186" alt="image" src="https://github.com/user-attachments/assets/08d5a17f-2dbd-43ed-ba8b-70b4055afa6f" />
+
+
+#### ALTER TABLE: Modifying Columns 
+
+``ALTER TABLE companies
+MODIFY company_name VARCHAR(100) DEFAULT 'unknown';``
+
+<img width="951" height="593" alt="image" src="https://github.com/user-attachments/assets/4dc1b0f8-76c2-4eba-b11b-88893a072bb7" />
+
+
+``ALTER TABLE suppliers
+CHANGE business biz_name VARCHAR(50);``
+
+
+#### ALTER TABLE: Constraints
 
 
 
