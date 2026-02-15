@@ -2116,6 +2116,160 @@ ORDER BY avg_rating;
 
 TV series challenge 3
 
+```
+SELECT 
+    first_name, last_name, rating
+FROM
+    reviewers
+        JOIN
+    reviews ON reviews.reviewer_id = reviewers.id;
+```
+
+<img width="758" height="809" alt="image" src="https://github.com/user-attachments/assets/3ee314d1-75c8-4b9f-ba3b-1b40af86a545" />
+
+
+TV series challenge 4
+
+Using inner join - using Left & right joins 
+
+```
+SELECT 
+    title AS unreviewed_series
+FROM
+    series
+        LEFT JOIN
+    reviews ON series.id = reviews.series_id
+WHERE
+    rating IS NULL;
+ 
+ 
+SELECT 
+    title AS unreviewed_series
+FROM
+    reviews
+        RIGHT JOIN
+    series ON series.id = reviews.series_id
+WHERE
+    rating IS NULL;
+```
+<img width="758" height="809" alt="image" src="https://github.com/user-attachments/assets/705e0b9f-119d-416b-9388-8dd78ea8060c" />
+
+
+TV series challenge 5
+
+Finding ave rathing for genres
+
+```
+SELECT 
+    genre, ROUND(AVG(rating), 2) AS avg_rating
+FROM
+    series
+        JOIN
+    reviews ON series.id = reviews.series_id
+GROUP BY genre;
+```
+
+<img width="554" height="332" alt="image" src="https://github.com/user-attachments/assets/57aa8c74-90cd-4288-90e9-bb78913784a7" />
+
+
+TV series challenge 6
+
+```
+-- USING CASE 
+SELECT 
+    first_name,
+    last_name,
+    COUNT(rating) AS count,
+    IFNULL(MIN(rating), 0) AS min,
+    IFNULL(MAX(rating), 0) AS max,
+    ROUND(IFNULL(AVG(rating), 0), 2) AS average,
+    CASE
+        WHEN COUNT(rating) >= 10 THEN 'POWERUSER'
+        WHEN COUNT(rating) > 0 THEN 'ACTIVE'
+        ELSE 'INACTIVE'
+    END AS status
+FROM
+    reviewers
+        LEFT JOIN
+    reviews ON reviewers.id = reviews.reviewer_id
+GROUP BY first_name , last_name;
+ 
+-- USING IF 
+SELECT 
+    first_name,
+    last_name,
+    COUNT(rating) AS count,
+    IFNULL(MIN(rating), 0) AS min,
+    IFNULL(MAX(rating), 0) AS max,
+    ROUND(IFNULL(AVG(rating), 0), 2) AS average,
+    IF(COUNT(rating) > 0,
+        'ACTIVE',
+        'INACTIVE') AS status
+FROM
+    reviewers
+        LEFT JOIN
+    reviews ON reviewers.id = reviews.reviewer_id
+GROUP BY first_name , last_name;
+```
+
+<img width="527" height="551" alt="image" src="https://github.com/user-attachments/assets/f899b5a7-3a53-4f2c-b93b-fc0134491e6a" />
+
+
+
+TV series challenge 7
+
+```
+SELECT 
+    title,
+    rating,
+    CONCAT(first_name, ' ', last_name) AS reviewer
+FROM
+    reviews
+        INNER JOIN
+    series ON reviews.series_id = series.id
+        INNER JOIN
+    reviewers ON reviews.reviewer_id = reviewers.id;
+ 
+ 
+ 
+SELECT 
+    title,
+    rating,
+    CONCAT(first_name, ' ', last_name) AS reviewer
+FROM
+    series
+        INNER JOIN
+    reviews ON reviews.series_id = series.id
+        INNER JOIN
+    reviewers ON reviews.reviewer_id = reviewers.id;
+ 
+ 
+ 
+SELECT 
+    title,
+    rating,
+    CONCAT(first_name, ' ', last_name) AS reviewer
+FROM
+    reviewers
+        INNER JOIN
+    reviews ON reviews.reviewer_id = reviewers.id
+        INNER JOIN
+    series ON reviews.series_id = series.id;
+```
+
+<img width="528" height="764" alt="image" src="https://github.com/user-attachments/assets/28d05de0-1895-441d-81e8-4270046bdcbe" />
+
+
+### View, Models and more 
+
+> Views
+>
+> a stored query so you don't have to rewite it over snd over.
+> A virtial type table 
+
+
+
+
 
 
 
