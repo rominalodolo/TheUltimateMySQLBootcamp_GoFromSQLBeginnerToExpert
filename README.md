@@ -2085,8 +2085,36 @@ INSERT INTO reviews(series_id, reviewer_id, rating) VALUES
 
 <img width="922" height="812" alt="image" src="https://github.com/user-attachments/assets/cb0d132a-ada6-4500-b347-1037d679d224" />
 
+TV series challenge 1
+
+```
+SELECT 
+    title, rating
+FROM
+    series
+        JOIN
+    reviews ON series.id = reviews.series_id;
+```
+
+<img width="922" height="812" alt="image" src="https://github.com/user-attachments/assets/20234a8b-8450-4d48-805e-a32b069990a7" />
+
+TV series challenge 2
+
+```
+SELECT 
+    title, ROUND(AVG(rating), 2) AS avg_rating
+FROM
+    series
+        JOIN
+    reviews ON series.id = reviews.series_id
+GROUP BY title
+ORDER BY avg_rating;
+```
+
+<img width="687" height="438" alt="image" src="https://github.com/user-attachments/assets/fb8c9476-224e-46a7-bacd-d3b12e6900e3" />
 
 
+TV series challenge 3
 
 
 
