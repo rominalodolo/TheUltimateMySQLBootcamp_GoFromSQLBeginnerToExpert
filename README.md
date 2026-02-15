@@ -1746,6 +1746,9 @@ ADD CONSTRAINT positive_pprice CHECK (purchase_price >= 0);
 
 ### One to Many and Joins
 
+<img width="1084" height="828" alt="Screenshot 2026-02-16 at 00 32 40" src="https://github.com/user-attachments/assets/8f632622-d7ab-48b4-bb4c-fe80d64c0801" />
+
+
 ```
 CREATE TABLE customers (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -1794,3 +1797,32 @@ WHERE customer_id = (SELECT id FROM customers WHERE last_name = 'George');
 -- To perform a (kind of useless) cross join:
 SELECT * FROM customers, orders;
 ```
+
+#### Inner Joins
+
+```
+-- Our first inner join!
+SELECT * FROM customers
+JOIN orders ON orders.customer_id = customers.id;
+ 
+SELECT first_name, last_name, order_date, amount FROM customers
+JOIN orders ON orders.customer_id = customers.id;
+ 
+-- The order doesn't matter here:
+SELECT * FROM orders
+JOIN customers ON customers.id = orders.customer_id;
+```
+
+```
+SELECT 
+    first_name, last_name, SUM(amount) AS total
+FROM
+    customers
+        JOIN
+    orders ON orders.customer_id = customers.id
+GROUP BY first_name , last_name
+ORDER BY total;
+```
+
+#### Left Join
+
