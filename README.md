@@ -1779,3 +1779,18 @@ VALUES ('2016-02-10', 99.99, 1),
 ```
 
 <img width="951" height="593" alt="image" src="https://github.com/user-attachments/assets/1c020579-7690-4665-9c0c-f4fa3eae207a" />
+
+
+#### Cross Joins
+
+```
+SELECT id FROM customers WHERE last_name = 'George';
+SELECT * FROM orders WHERE customer_id = 1;
+ 
+ 
+SELECT * FROM orders 
+WHERE customer_id = (SELECT id FROM customers WHERE last_name = 'George');
+ 
+-- To perform a (kind of useless) cross join:
+SELECT * FROM customers, orders;
+```
