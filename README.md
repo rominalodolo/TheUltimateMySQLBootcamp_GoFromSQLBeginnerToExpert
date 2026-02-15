@@ -1826,3 +1826,177 @@ ORDER BY total;
 
 #### Left Join
 
+Taking everything from the left side and any overlaps from the other table - customers is the left side, orders table would be the other data added seen aswell.
+Good way to find if there's users who haven't placed orders. You'd have to see it with the overlap. 
+
+```
+SELECT 
+    first_name, last_name, order_date, amount
+FROM
+    customers
+        LEFT JOIN
+    orders ON orders.customer_id = customers.id;
+ 
+ 
+SELECT 
+    order_date, amount, first_name, last_name
+FROM
+    orders
+        LEFT JOIN
+    customers ON orders.customer_id = customers.id;
+```
+
+Replacing null values by using IFNULL to make null values a 0 
+
+```
+SELECT 
+    first_name, 
+    last_name, 
+    IFNULL(SUM(amount), 0) AS money_spent
+FROM
+    customers
+        LEFT JOIN
+    orders ON customers.id = orders.customer_id
+GROUP BY first_name , last_name;
+```
+
+
+#### Right Join
+
+Same as Left join but ir's the right table 
+
+```
+SELECT 
+    first_name, last_name, order_date, amount
+FROM
+    customers
+        RIGHT JOIN
+    orders ON customers.id = orders.customer_id;
+```
+
+#### On delete Cascade
+
+We can't delete foriegn ids you will get an error but you can add ON DELETE CASCADE to delete all instances of the data associated with that id so that you can remove a users data from a database. 
+
+**NB! Very useful to have this part of your initial table creation.**
+
+```
+CREATE TABLE customers (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(50)
+);
+ 
+CREATE TABLE orders (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    order_date DATE,
+    amount DECIMAL(8 , 2 ),
+    customer_id INT,
+    FOREIGN KEY (customer_id)
+        REFERENCES customers (id)
+        ON DELETE CASCADE
+);
+```
+
+#### Exercise 
+
+Students and papers tables. 
+Students: id, first_name
+Papers: title, grade, student_id
+Null values for grades or titles should be missing and undefined. 
+
+Then, add a use case where you can make an average for passing or failed and the pass mark is 75%.
+
+Starter data: 
+
+```
+INSERT INTO students (first_name) VALUES 
+('Caleb'), ('Samantha'), ('Raj'), ('Carlos'), ('Lisa');
+ 
+INSERT INTO papers (student_id, title, grade ) VALUES
+(1, 'My First Book Report', 60),
+(1, 'My Second Book Report', 75),
+(2, 'Russian Lit Through The Ages', 94),
+(2, 'De Montaigne and The Art of The Essay', 98),
+(4, 'Borges and Magical Realism', 89);
+```
+
+Code 
+```
+CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50)
+);
+ 
+ 
+CREATE TABLE papers (
+    title VARCHAR(50),
+    grade INT,
+    student_id INT,
+    FOREIGN KEY (student_id)
+        REFERENCES students (id)
+);
+ 
+ 
+SELECT 
+    first_name, title, grade
+FROM
+    students
+        JOIN
+    papers ON papers.student_id = students.id
+ORDER BY grade DESC;
+ 
+ 
+ 
+SELECT 
+    first_name, title, grade
+FROM
+    students
+        LEFT JOIN
+    papers ON papers.student_id = students.id;
+ 
+ 
+ 
+SELECT 
+    first_name, IFNULL(title, 'MISSING'), IFNULL(grade, 0)
+FROM
+    students
+        LEFT JOIN
+    papers ON papers.student_id = students.id;
+ 
+ 
+ 
+SELECT 
+    first_name, IFNULL(AVG(grade), 0) AS average
+FROM
+    students
+        LEFT JOIN
+    papers ON students.id = papers.student_id
+GROUP BY first_name
+ORDER BY average DESC;
+ 
+ 
+ 
+SELECT 
+    first_name,
+    IFNULL(AVG(grade), 0) AS average,
+    CASE
+        WHEN IFNULL(AVG(grade), 0) >= 75 THEN 'passing'
+        ELSE 'failing'
+    END AS passing_status
+FROM
+    students
+        LEFT JOIN
+    papers ON students.id = papers.student_id
+GROUP BY first_name
+ORDER BY average DESC;
+```
+
+
+
+
+
+
+
+
