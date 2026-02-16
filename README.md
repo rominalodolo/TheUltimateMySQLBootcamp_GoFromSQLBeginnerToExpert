@@ -2454,3 +2454,37 @@ FROM
 #### PARTITION BY 
 
 <img width="916" height="484" alt="image" src="https://github.com/user-attachments/assets/aae96ca6-3fbd-4b2f-98b2-b0a16d90b66b" />
+
+```
+SELECT 
+    emp_no, 
+    department, 
+    salary, 
+    AVG(salary) OVER(PARTITION BY department) AS dept_avg,
+    AVG(salary) OVER() AS company_avg
+FROM employees;
+ 
+SELECT 
+    emp_no, 
+    department, 
+    salary, 
+    COUNT(*) OVER(PARTITION BY department) as dept_count
+FROM employees;
+ 
+SELECT 
+    emp_no, 
+    department, 
+    salary, 
+    SUM(salary) OVER(PARTITION BY department) AS dept_payroll,
+    SUM(salary) OVER() AS total_payroll
+FROM employees;
+```
+
+<img width="910" height="695" alt="image" src="https://github.com/user-attachments/assets/1bda1543-c9a8-44f5-b1df-2809ca825064" />
+
+
+#### ORDER BY
+
+<img width="916" height="484" alt="image" src="https://github.com/user-attachments/assets/e717b803-3993-40eb-803d-851ffe1179af" />
+
+
