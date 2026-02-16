@@ -2352,7 +2352,35 @@ GROUP BY released_year , genre , first_name WITH ROLLUP;
 ```
 
 
+#### SQL Modes Basics
 
+If you want to change the basic conditions of the baground functions 
+
+```
+-- To View Modes:
+SELECT @@GLOBAL.sql_mode;
+SELECT @@SESSION.sql_mode;
+ 
+-- To Set Them:
+SET GLOBAL sql_mode = 'modes';
+SET SESSION sql_mode = 'modes';
+```
+
+#### STRICT_TRANS_TABLES
+
+Stands for strictly tranactional tables 
+Strict mode controles missing values and how to manage the chars or out of range etc. 
+Helpful from a baseline level when you want to change what throws errors. 
+
+#### More Modes
+
+Default enabled modes like full or only group by 
+
+See the docs [here](https://dev.mysql.com/doc/refman/8.0/en/sql-mode.html) 👈
+
+<img width="1174" height="743" alt="image" src="https://github.com/user-attachments/assets/f2fd2863-125c-445a-8c6a-888f9a453415" />
+
+<img width="1174" height="931" alt="image" src="https://github.com/user-attachments/assets/e8d6b0e8-d7ae-4caf-8fb0-75d49205ad3f" />
 
 
 
