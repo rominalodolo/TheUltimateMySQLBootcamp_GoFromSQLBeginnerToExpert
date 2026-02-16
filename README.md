@@ -2487,4 +2487,62 @@ FROM employees;
 
 <img width="916" height="484" alt="image" src="https://github.com/user-attachments/assets/e717b803-3993-40eb-803d-851ffe1179af" />
 
+```
+SELECT 
+    emp_no, 
+    department, 
+    salary, 
+    SUM(salary) OVER(PARTITION BY department ORDER BY salary) AS rolling_dept_salary,
+    SUM(salary) OVER(PARTITION BY department) AS total_dept_salary
+FROM employees;
+ 
+SELECT 
+    emp_no, 
+    department, 
+    salary, 
+    MIN(salary) OVER(PARTITION BY department ORDER BY salary DESC) as rolling_min
+FROM employees;
+```
+<img width="910" height="733" alt="image" src="https://github.com/user-attachments/assets/7a4c05e0-7293-4544-a9ac-6ecb535de446" />
+
+
+#### RANK()
+
+Exclusively window functions more [docs](https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.html)
+
+
+#### DENSE_RANK & ROW_NUMBER()
+
+```
+SELECT 
+    emp_no, 
+    department, 
+    salary,
+    ROW_NUMBER() OVER(PARTITION BY department ORDER BY SALARY DESC) as dept_row_number,
+    RANK() OVER(PARTITION BY department ORDER BY SALARY DESC) as dept_salary_rank,
+    RANK() OVER(ORDER BY salary DESC) as overall_rank,
+    DENSE_RANK() OVER(ORDER BY salary DESC) as overall_dense_rank,
+    ROW_NUMBER() OVER(ORDER BY salary DESC) as overall_num
+FROM employees ORDER BY overall_rank;
+```
+
+<img width="910" height="733" alt="image" src="https://github.com/user-attachments/assets/5d4dac03-47ac-46a0-8be7-7011ff0d21dc" />
+
+
+#### NTILE()
+
+<img width="1151" height="948" alt="image" src="https://github.com/user-attachments/assets/64448286-a91f-4bd7-b9a3-313e3dc07212" />
+
+```
+SELECT 
+    emp_no, 
+    department, 
+    salary,
+    NTILE(4) OVER(PARTITION BY department ORDER BY salary DESC) AS dept_salary_quartile,
+	NTILE(4) OVER(ORDER BY salary DESC) AS salary_quartile
+FROM employees;
+```
+
+<img width="952" height="634" alt="image" src="https://github.com/user-attachments/assets/b25f8e0e-ba12-4995-8ccf-b323eb8e072e" />
+
 
