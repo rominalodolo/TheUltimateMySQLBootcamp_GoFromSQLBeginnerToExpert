@@ -2546,3 +2546,42 @@ FROM employees;
 <img width="952" height="634" alt="image" src="https://github.com/user-attachments/assets/b25f8e0e-ba12-4995-8ccf-b323eb8e072e" />
 
 
+#### FIRST_VALUE
+
+
+```
+SELECT 
+    emp_no, 
+    department, 
+    salary,
+    FIRST_VALUE(emp_no) OVER(PARTITION BY department ORDER BY salary DESC) as highest_paid_dept,
+    FIRST_VALUE(emp_no) OVER(ORDER BY salary DESC) as highest_paid_overall
+FROM employees;
+```
+<img width="1011" height="774" alt="image" src="https://github.com/user-attachments/assets/c5024b5e-e2f0-498b-8c4d-3c6861dee7e3" />
+
+
+#### LEAD and LAG
+
+<img width="1134" height="816" alt="image" src="https://github.com/user-attachments/assets/8460a218-bf79-4c4d-8d6c-b444f2d9ad2c" />
+
+```
+SELECT 
+    emp_no, 
+    department, 
+    salary,
+    salary - LAG(salary) OVER(ORDER BY salary DESC) as salary_diff
+FROM employees;
+ 
+SELECT 
+    emp_no, 
+    department, 
+    salary,
+    salary - LAG(salary) OVER(PARTITION BY department ORDER BY salary DESC) as dept_salary_diff
+FROM employees;
+```
+<img width="971" height="838" alt="image" src="https://github.com/user-attachments/assets/049ff6ec-b341-453c-82ee-5eae738da87f" />
+
+
+### Instagram Database Clone
+
