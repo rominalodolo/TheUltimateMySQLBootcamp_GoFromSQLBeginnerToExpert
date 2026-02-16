@@ -2400,7 +2400,7 @@ I am currenlty running v8
 <img width="1209" height="645" alt="image" src="https://github.com/user-attachments/assets/fbd42c5e-c280-4c79-9757-08bba16bf685" />
 
 ```
-CREATE DATABASE windowfunctions
+CREATE DATABASE windowfunctions;
 
 CREATE TABLE employees (
     emp_no INT PRIMARY KEY AUTO_INCREMENT,
@@ -2448,4 +2448,9 @@ SELECT
 FROM
     employees;
 ```
+<img width="899" height="777" alt="image" src="https://github.com/user-attachments/assets/d1d8c99a-2eb1-4b51-96c2-b92ae83cb249" />
 
+
+#### PARTITION BY 
+
+<img width="916" height="484" alt="image" src="https://github.com/user-attachments/assets/aae96ca6-3fbd-4b2f-98b2-b0a16d90b66b" />
