@@ -2294,6 +2294,66 @@ SELECT * FROM full_reviews;
 
 Viewiing just let's you see the data and play with what you get not dlete or alter anything. 
 
+```
+CREATE VIEW ordered_series AS
+SELECT * FROM series ORDER BY released_year;
+ 
+CREATE OR REPLACE VIEW ordered_series AS
+SELECT * FROM series ORDER BY released_year DESC;
+ 
+ALTER VIEW ordered_series AS
+SELECT * FROM series ORDER BY released_year;
+ 
+DROP VIEW ordered_series;
+```
+
+
+> HAVING clauce 
+>
+> HAVING is used to filter groups that we get from GROUP BY
+> 
+
+```
+SELECT 
+    title, 
+    AVG(rating),
+    COUNT(rating) AS review_count
+FROM full_reviews 
+GROUP BY title HAVING COUNT(rating) > 1;
+```
+
+
+> WITH ROLLUP
+>
+> Only works with GROUP BY
+>
+> 
+
+```
+SELECT 
+    title, AVG(rating)
+FROM
+    full_reviews
+GROUP BY title WITH ROLLUP;
+ 
+ 
+SELECT 
+    title, COUNT(rating)
+FROM
+    full_reviews
+GROUP BY title WITH ROLLUP;
+ 
+ 
+SELECT 
+    first_name, released_year, genre, AVG(rating)
+FROM
+    full_reviews
+GROUP BY released_year , genre , first_name WITH ROLLUP;
+```
+
+
+
+
 
 
 
