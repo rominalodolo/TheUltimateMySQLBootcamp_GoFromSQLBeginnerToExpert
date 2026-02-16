@@ -2384,6 +2384,14 @@ See the docs [here](https://dev.mysql.com/doc/refman/8.0/en/sql-mode.html) 👈
 
 
 
+### Window Functions
 
+> "Before you begin this section about Window Functions, please be aware that you will not be able to run the code from this section in your Goorm environment.
+> Goorm uses MySQL 5.7 by default, which does not support Window Functions.
+> MySQL 8.0 and newer will support Window Functions but upgrading to 8.x on Goorm is not an easy task.
+> If you would like to use Window Functions, then we recommend installing MySQL 8.x on your local machine (see Section 2 for installation instructions)."
+>
+> 
 
+<img width="1209" height="779" alt="image" src="https://github.com/user-attachments/assets/93be36e8-ef76-4fc5-a00f-7b31724ccc13" />
 
