@@ -2739,11 +2739,76 @@ LIMIT 2;
 
 <img width="961" height="910" alt="image" src="https://github.com/user-attachments/assets/2b8164ab-f476-42cb-a056-5ea13c459a41" />
 
-3. Find the users who never post images. Ghost users?
+3. Find the users who never post images. Ghost or lurker users?
+
+``
+SELECT username
+FROM users
+LEFT JOIN photos
+    ON users.id = photos.user_id
+WHERE photos.id IS NULL;
+``
+
+<img width="961" height="910" alt="image" src="https://github.com/user-attachments/assets/d0048ade-a769-4327-81eb-77d25b74d9f6" />
 
 
+4. Who has the most likes on an image.
 
-4. 
+``
+SELECT 
+    username,
+    photos.id,
+    photos.image_url, 
+    COUNT(*) AS total
+FROM photos
+INNER JOIN likes
+    ON likes.photo_id = photos.id
+INNER JOIN users
+    ON photos.user_id = users.id
+GROUP BY photos.id
+ORDER BY total DESC
+LIMIT 1;
+``
+<img width="413" height="507" alt="image" src="https://github.com/user-attachments/assets/3bf6f177-49bd-4a3b-ac75-5622df4da51f" />
 
+
+5. How many times does the ave user post?
+
+``
+SELECT (SELECT Count(*) 
+        FROM   photos) / (SELECT Count(*) 
+                          FROM   users) AS avg; 
+						  ``
+<img width="508" height="513" alt="image" src="https://github.com/user-attachments/assets/80cee1f4-0603-40a1-9eb3-7ba7cddf2836" />
+
+6. 5 Most popular hashtags
+
+``
+SELECT tags.tag_name, 
+       Count(*) AS total 
+FROM   photo_tags 
+       JOIN tags 
+         ON photo_tags.tag_id = tags.id 
+GROUP  BY tags.id 
+ORDER  BY total DESC 
+LIMIT  5; 
+``
+
+<img width="443" height="451" alt="image" src="https://github.com/user-attachments/assets/a07f9de6-0ca5-430a-9af5-3169ce82e0d3" />
+
+7. Find users who have liked every site on the site 
+
+
+``
+SELECT username, 
+       Count(*) AS num_likes 
+FROM   users 
+       INNER JOIN likes 
+               ON users.id = likes.user_id 
+GROUP  BY likes.user_id 
+HAVING num_likes = (SELECT Count(*) 
+                    FROM   photos); 
+``
+<img width="413" height="585" alt="image" src="https://github.com/user-attachments/assets/f4c2ab03-a49a-4a9a-b679-dc744eb8ae5d" />
 
 
