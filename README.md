@@ -1,4 +1,4 @@
-# The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
+<img width="961" height="910" alt="image" src="https://github.com/user-attachments/assets/6c38301e-a51b-4244-974e-7f20004c4c8c" /># The Ultimate My SQL Bootcamp: Go from SQL Beginner to Expert
 
 The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert, the Udemy course for SQL. 
 
@@ -2724,4 +2724,26 @@ Inserting data:
 1. Find the 5 oldest users. 
 ` SELECT * FROM users ORDER BY created_at LIMIT 5;`
 <img width="961" height="910" alt="image" src="https://github.com/user-attachments/assets/d8aa59d6-94f0-4fc7-9f37-ab668dec3f93" />
+
+2. Most popular registration date
+
+``
+SELECT 
+    DAYNAME(created_at) AS day,
+    COUNT(*) AS total
+FROM users
+GROUP BY day
+ORDER BY total DESC
+LIMIT 2; 
+``
+
+<img width="961" height="910" alt="image" src="https://github.com/user-attachments/assets/2b8164ab-f476-42cb-a056-5ea13c459a41" />
+
+3. Find the users who never post images. Ghost users?
+
+
+
+4. 
+
+
 
