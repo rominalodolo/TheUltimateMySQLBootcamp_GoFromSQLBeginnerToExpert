@@ -2820,12 +2820,12 @@ HAVING num_likes = (SELECT Count(*)
 <img width="725" height="358" alt="image" src="https://github.com/user-attachments/assets/81bca390-7a10-4083-b772-3902140aa615" />
 
 
-CREATE DATABASE trigger_demo;
+`CREATE DATABASE trigger_demo;`
 
-USE trigger_demo; 
+`USE trigger_demo; `
 <img width="553" height="274" alt="image" src="https://github.com/user-attachments/assets/afac3ddc-eaf9-4e73-b6da-a88c65a8a2af" />
 
-``
+```
 CREATE TABLE users (
     username VARCHAR(100),
     age      INT
@@ -2835,8 +2835,14 @@ INSERT INTO users(username, age) VALUES ("Bobby", 23);
 INSERT INTO users(username, age) VALUES ("Sally", 16);
 INSERT INTO users(username, age) VALUES ("Sue", 54);
 INSERT INTO users(username, age) VALUES ("Yang", 14);
-``
+```
 
 <img width="736" height="268" alt="image" src="https://github.com/user-attachments/assets/f43f4764-ad84-4304-b2da-8d45494b06eb" />
 
+
+<img width="707" height="452" alt="image" src="https://github.com/user-attachments/assets/ebe9bc36-b02f-46d9-85f4-8f5715ea11f1" />
+
+Error codes: 
+
+<img width="721" height="275" alt="image" src="https://github.com/user-attachments/assets/d8a22247-31ca-45d7-a345-3f23f520e12d" />
 
