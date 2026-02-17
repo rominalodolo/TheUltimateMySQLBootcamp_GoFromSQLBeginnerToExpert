@@ -2721,4 +2721,7 @@ Inserting data:
 <img width="961" height="910" alt="image" src="https://github.com/user-attachments/assets/12b792f3-62b5-4982-a598-54e826e647a9" />
 
 #### The questions: 
-1. 
+1. Find the 5 oldest users. 
+` SELECT * FROM users ORDER BY created_at LIMIT 5;`
+<img width="961" height="910" alt="image" src="https://github.com/user-attachments/assets/d8aa59d6-94f0-4fc7-9f37-ab668dec3f93" />
+
