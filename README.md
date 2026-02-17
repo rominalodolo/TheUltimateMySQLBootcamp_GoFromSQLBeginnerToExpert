@@ -2714,3 +2714,11 @@ CREATE TABLE photo_tags (
 );
 
 ```
+
+
+Inserting data:
+
+<img width="961" height="910" alt="image" src="https://github.com/user-attachments/assets/12b792f3-62b5-4982-a598-54e826e647a9" />
+
+#### The questions: 
+1. 
