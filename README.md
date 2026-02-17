@@ -2585,3 +2585,13 @@ FROM employees;
 
 ### Instagram Database Clone
 
+Create a sql file that you can rerun. 
+
+CREATE DATABASE instagramcloneapp_db;
+USE instagramcloneapp_db;
+
+CREATE TABLE users(
+id INTEGER AUTO_INCREMENT PRIMARY KEY, 
+username VARCHAR(255) UNIQUE
+created_at TIMESTAN+MP DEFAULT NOW()
+)
